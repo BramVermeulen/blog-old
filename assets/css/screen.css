@@ -10,14 +10,6 @@ html {
 
 }
 
-h1 > span > a {
-    color: #1DB954 !important;
-    text-decoration: none;      
-}
-
-h1 > span > a:hover {
-    color: #006D08 !important;
-}
 
 h1 > span > a {
     color: #1DB954 !important;
@@ -26,6 +18,16 @@ h1 > span > a {
 
 h1 > span > a:hover {
     color: #006D08 !important;
+}
+
+
+h1, h2 {
+    color: #1DB954;
+}
+
+
+p {
+    color:whitesmoke
 }
 
 main > div > div> div > div > a{
@@ -53,7 +55,6 @@ body {
     font-family: Roboto-Regular;
   
 }
-
 
 
 .bg-darker {

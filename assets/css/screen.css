@@ -40,6 +40,15 @@ main > div > div> div > div > a:hover > div > div> h2{
     color: #006D08
 }
 
+footer > div > p > a{
+    color: #1DB954 !important;
+    text-decoration: none; 
+}
+
+footer > div > p > a:hover{
+    color: #006D08 !important;
+}
+
 body {
     font-family: Roboto-Regular;
   

@@ -30,6 +30,15 @@ p {
     color:whitesmoke
 }
 
+article > section > p > a{
+    text-decoration: none;
+    color: #1DB954
+}
+
+article > section > p > a:hover{
+    color: #006D08
+}
+
 main > div > div> div > div > a{
     text-decoration: none;
 }

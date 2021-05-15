@@ -47,98 +47,106 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="album py-5 bg-darker">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <a href="https://www.linkedin.com/in/bramvermeulen1999/">
-                            <div class="card bg-darkest">
-                                <figure class="bd-placeholder-img card-img-top">
-                                    <title>HowestStone</title>
-                                    <img src="../assets/media/Howeststone.png" alt="..." class="w-100">
-                                </figure>
-
-                                <div class="card-body bg-darkest">
-                                    <h2 class="h4">HowestStone</h2>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://www.linkedin.com/in/bramvermeulen1999/">
-                            <div class="card bg-darkest">
-                                <figure class="bd-placeholder-img card-img-top">
-                                    <title>Trace</title>
-                                    <img src="../assets/media/trace.png" alt="..." class="w-100">
-                                </figure>
-
-                                <div class="card-body bg-darkest">
-                                    <h2 class="h4">Trace</h2>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://www.linkedin.com/in/bramvermeulen1999/">
-                            <div class="card bg-darkest">
-                                <figure class="bd-placeholder-img card-img-top">
-                                    <title>New Horizon</title>
-                                    <img src="../assets/media/newhorizon.png" alt="..." class="w-100">
-                                </figure>
-
-                                <div class="card-body bg-darkest">
-                                    <h2 class="h4">New Horizon</h2>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://www.linkedin.com/in/bramvermeulen1999/">
-                            <div class="card bg-darkest">
-                                <figure class="bd-placeholder-img card-img-top">
-                                    <title>International Project</title>
-                                    <img src="../assets/media/vokalogo.png" alt="..." class="w-100">
-                                </figure>
-
-                                <div class="card-body bg-darkest">
-                                    <h2 class="h4">International Project</h2>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://www.linkedin.com/in/bramvermeulen1999/">
-                            <div class="card bg-darkest">
-                                <figure class="bd-placeholder-img card-img-top">
-                                    <title>LoREco project</title>
-                                    <img src="../assets/media/lorecologo.png" alt="..." class="w-100">
-                                </figure>
-
-                                <div class="card-body bg-darkest">
-                                    <h2 class="h4">LoREco project</h2>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://www.linkedin.com/in/bramvermeulen1999/">
-                            <div class="card bg-darkest">
-                                <figure class="bd-placeholder-img card-img-top">
-                                    <title>Mars-IT: discord.py</title>
-                                    <img src="../assets/media/discordpylogo.jpg" alt="..." class="w-100">
-                                </figure>
-
-                                <div class="card-body bg-darkest">
-                                    <h2 class="h4">Mars-IT: discord.py</h2>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <main class="bg-darker">
+        <div class="container py-5">
+            <article>
+                <header class="mb-4">
+                    <h1 class="fw-bolder mb-1">Making a Discord bot using discord.py</h1>
+                </header>
+                <section class="mb-5">
+                    <p class="fs-5 mb-4">In this tutorial you will learn how to make your own Discord bot using discord.py a python library made for interacting with the Discord API. This tutorial is focussing on how to register your own bot and how to make your won bot. Basic knowledge of Python is advised.</p>
+                    <h2 class="fw-bolder mb-4 mt-5">What will you learn in this tutorial?</h2>
+                    <ul class="fs-5 mb-4">
+                        <li>Make a basic bot</li>
+                        <li>Register your own Bot Account</li>
+                    </ul>
+                    <h3 class="fw-bolder mb-3 mt-5">Requirements:</h3>
+                    <ul class="fs-5 mb-4">
+                        <li>Python 3.7.0 or greater</li>
+                        <li>discord.py 1.7.0 or greater</li>
+                        <li>pip 18.1 or greater</li>
+                    </ul>
+                    <h4 class="fw-bolder mb-3 mt-5">Pip install windows:</h4>
+                    <p class="fs-5 mb-4">pip3 install discord.py</p>
+                    <h4 class="fw-bolder mb-3 mt-5">Pip install unix:</h4>
+                    <p class="fs-5 mb-4">python3.x -m pip3 install discord.py (replace "x" with your subversion).</p>
+                    <h2 class="fw-bolder mb-4 mt-5">Make your own bot</h2>
+                    <p class="fs-5 mb-4">Create a file named tutorial.py. 
+                        Do not name your file discord.py as this will conflict with the discord.py library.</p>
+                    <p class="fs-5 mb-4">On the first line you write “import discord” this imports the library.</p>
+                    <p class="fs-5 mb-4">Next, you write “client = discord.Client()”. This creates an instance of a Client. This client makes it possible for us to connect to Discord.</p>
+                    <p class="fs-5 mb-4">We then write “@client.event”. This is a decorator to register an event. Because this library is asynchronous, we do things in a “callback” style manner.</p>
+                    <p class="fs-5 mb-4">A callback is a function that is called when something happens. The on_ready() event is called when the bot has finished logging in and setting things up and the on_message() event is called when the bot has received a message.</p>
+                    <p class="fs-5 mb-4">Since the on_message() event triggers for every message received, we have to make sure that we ignore messages from ourselves. We do this by checking if the Message.author is the same as the Client.user.</p>             
+                    <p class="fs-5 mb-4">Afterwards, we check if the Message.content starts with '$hello'. If it does, then we send a message in the channel it was used in with 'Hello!'.</p>
+                    <p class="fs-5 mb-4">Complete your bot with the code shown in the following image:</p>
+                    <figure class="mb-4"><img class="img-fluid rounded"
+                        src="../assets/media/discordscript.PNG" alt="..." /></figure>
+                    <p class="fs-5 mb-4">After you registered your bot and copied your token run the bot using:</p>
+                    <ul class="fs-5 mb-4">
+                        <li>"$ py -3 tutorial.py" on Windows</li>
+                        <li>"$ python3 tutorial.py" on other systems</li>
+                    </ul>
+                    <h2 class="fw-bolder mb-4 mt-5">Register your own Bot Account</h2>
+                    <h3 class="fw-bolder mb-3 mt-5">Login:</h3>
+                    <p class="fs-5 mb-4">go to <a href="https://discord.com/login" target="_blank">https://discord.com/login</a> and login to your discord account.
+                        If you don't have an account click register.</p>
+                    <h3 class="fw-bolder mb-3 mt-5">Create application:</h3>
+                    <ul class="fs-5 mb-4">
+                        <li>Go to <a href="https://discord.com/developers/applications" target="_blank">https://discord.com/developers/applications</a></li>
+                        <li>Click New Application.</li>
+                        <figure class="mb-4"><img class="img-fluid rounded"
+                            src="../assets/media/developers_applications.png" alt="..." /></figure>
+                        <li>Give your application a name.</li>
+                        <li>Click Create.</li>
+                        <figure class="mb-4"><img class="img-fluid rounded"
+                            src="../assets/media/create_application.png" alt="..." /></figure>
+                    </ul>
+                    <h3 class="fw-bolder mb-3 mt-5">Add a bot:</h3>
+                    <ul class="fs-5 mb-4">
+                        <li>Click on Bot on the left side navigation.</li>
+                        <figure class="mb-4"><img class="img-fluid rounded"
+                            src="../assets/media/application_general_information.png" alt="..." /></figure>
+                        <li>Click on Add Bot.</li>
+                        <figure class="mb-4"><img class="img-fluid rounded"
+                            src="../assets/media/application_bot_add_bot.png" alt="..." /></figure>
+                        <li>Click on Yes, do it!</li>
+                        <figure class="mb-4"><img class="img-fluid rounded"
+                            src="../assets/media/application_bot_add_a_bot_to_this_app.png" alt="..." /></figure>
+                    </ul>
+                    <h3 class="fw-bolder mb-3 mt-5">OAuth2:</h3>
+                    <ul class="fs-5 mb-4">
+                        <li>Click on *OAuth2* on the left side navigation.</li>
+                        <li>Tick the square bot inside scopes.</li>
+                        <figure class="mb-4"><img class="img-fluid rounded"
+                            src="../assets/media/application_oauth2_scopes_bot.png" alt="..." /></figure>
+                        <li>Tick the permission you would like to set for your bot. For example tick the Administrator permission.</li>
+                        <li>Click on copy to copy the created link.</li>
+                        <figure class="mb-4"><img class="img-fluid rounded"
+                            src="../assets/media/application_oauth2_permissions_administrator.png" alt="..." /></figure>
+                    </ul>
+                    <h3 class="fw-bolder mb-3 mt-5">Add the bot to a server:</h3>
+                    <ul class="fs-5 mb-4">
+                        <li>Paste the copied link into the address bar.</li>
+                        <li>Choose a server you want to add the bot to.</li>
+                        <li>Click Proceed.</li>
+                        <figure class="mb-4"><img class="img-fluid rounded"
+                            src="../assets/media/application_bot_token_copy.png" alt="..." /></figure>
+                    </ul>
+                    <h3 class="fw-bolder mb-3 mt-5">Copy the token:</h3>
+                    <ul class="fs-5 mb-4">
+                        <li>Go back to Bot on the left side navigation.</li>
+                        <li>Click Copy this will give you the token for your bot.</li>
+                        <li>Paste your token in client.run(‘’).</li>
+                    </ul>
+                    <h2 class="fw-bolder mb-4 mt-5">Conclusion</h2>
+                    <p class="fs-5 mb-4">Now you have created a basic discord bot using discord.py. If you want to learn more about discord.py the discord.py documentation is linked at the end of this tutorial.</p>
+                    <h2 class="fw-bolder mb-4 mt-5">Source Reference</h2>
+                    <p class="fs-5 mb-4">discord.py documentation, accessed 14/03/2021,<br><a href="https://discordpy.readthedocs.io/en/stable/" target="_blank">https://discordpy.readthedocs.io/en/stable/</a></p>
+                    <p class="fs-5 mb-4">Discord documentation, accessed 14/03/2021,<br><a href="https://discord.com/developers/docs/intro" target="_blank">https://discord.com/developers/docs/intro</a></p>
+                </section>
+            </article>
         </div>
-
     </main>
 
     <footer class="text-muted text-center py-3 bg-darkest">

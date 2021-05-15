@@ -21,21 +21,28 @@ h1 > span > a:hover {
 }
 
 
-h1, h2 {
+h1, h2, h4, h5 {
     color: #1DB954;
 }
 
+h3{
+    color: #006D08
+}
 
-p {
+h4{
+    font-style: italic;
+}
+
+p, ul {
     color:whitesmoke
 }
 
-article > section > p > a{
+article > section > p > a, article > section > ul > li >a{
     text-decoration: none;
     color: #1DB954
 }
 
-article > section > p > a:hover{
+article > section > p > a:hover, article > section > ul > li >a:hover{
     color: #006D08
 }
 

@@ -1,2 +1,2 @@
-# blog.bramvermeulen
+# blog
 My blog
